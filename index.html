@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress_bar</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="progress_container">
+
+        </div>
+    </div>
+   <section >SECTION 1</section>
+   <hr>
+   <section>SECTION 2</section>
+   <hr>
+   <section>SECTION 3</section>
+   <hr>
+   <section>SECTION 4</section>
+
+   <script>
+
+    const updateProgress = document.querySelector(".progress_container");
+
+    function update(){
+        updateProgress.style.width = `${((window.scrollY )/ (document.body.scrollHeight-window.innerHeight)*100)}% `;
+        requestAnimationFrame( update);
+    }
+
+    update();
+   </script>
+</body>
+</html>
